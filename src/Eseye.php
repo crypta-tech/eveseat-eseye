@@ -323,7 +323,7 @@ class Eseye
         $uri = $this->buildDataUri($endpoint, $uri_data);
 
         // Make sure our user agent does not contain the default seat contact email
-        if ( str_contains($this->getConfiguration()->http_user_agent, "seatadmin@localhost.local") ){
+        if (str_contains($this->getConfiguration()->http_user_agent, 'seatadmin@localhost.local')){
 
             // Log the lack of config.
             $this->getConfiguration()->getLogger()->error('Access denied to ' . $uri . ' due to default user agent configuration.');
